@@ -10,15 +10,12 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.textHuge}>{count}</Text>
 
-      {/* <Pressable
-        style={styles.floatingButton}
-        onPress={() => setCount(count + 1)}
+      <FAB label='+1' onPress={() => setCount(count + 1)}
         onLongPress={() => setCount(0)}
-      >
-        <Text style={{ color: 'white', fontSize: 20 }}>+1</Text>
-      </Pressable> */}
+        position='right' />
 
-      <FAB label='+1' onPress={() => setCount(count + 1)} onLongPress={() => setCount(0)}/>
+      <FAB label='Reset' onPress={() => setCount(0)}
+        position='left' />
 
       <StatusBar style="auto" />
     </View>
